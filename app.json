@@ -1,14 +1,20 @@
 {
-  "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+  "pages": [
+    "pages/login/login",
+      "pages/home/home",
+      "pages/ledger/ledger",
+      "pages/bookkeeping/bookkeeping",
+      "pages/details/details",
+      "pages/budget/budget"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+  "window": {
+      "backgroundColor": "#39C5BB",
+      "backgroundTextStyle": "light",
+      "navigationBarBackgroundColor": "#F6F6F6",
+      "navigationBarTextStyle": "black",
+      "navigationStyle": "default"
   },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "style": "v2"
 }

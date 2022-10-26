@@ -1,0 +1,5 @@
+<view class="con">
+    <view bindtap="tobookkeeping"> 记一笔</view>
+    <view>统计</view>
+    <view>我的</view>
+</view>

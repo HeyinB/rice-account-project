@@ -1,0 +1,8 @@
+<view class="nav" style="right: {{show === 0?'0':'-300rpx'}}">
+  <view class="nav-list">
+    <view class="icon" bindtap="ShowOrHide">></view>
+    <view class="nav-item iconfont icon-lingshi"  bindtap="tobookkeeping"></view>
+    <view class="nav-item iconfont icon-gouwu"></view>
+    <view class="nav-item iconfont icon-shejiao-tuandui"></view>
+  </view>
+</view>

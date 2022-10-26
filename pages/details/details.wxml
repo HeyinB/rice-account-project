@@ -1,0 +1,24 @@
+
+    <view class="container">
+      <view class="container-top">
+        <view class="detail-left"></view>
+        <view class="detail-middle">
+          <view class="top">
+            <view class="detail-icon">
+              <view class="icon iconfont {{billInfo.bill_iconclass}}"></view>
+            </view>
+            <view class="detail-name">{{billInfo.bill_iconname}}</view>
+            <view class="remake">{{billInfo.bill_remark}}</view>
+          </view>
+          <view class="midel">
+            <view class="price">-{{billInfo.bill_price}}</view>
+            <view class="time">{{billInfo.cdata}}</view>
+          </view>
+        </view>
+        <view class="detail-right"></view>
+      </view>
+      <view class="container-bottom">
+        <view class="btn-edi">编辑</view>
+        <view class="btn-del" bindtap="delete">删除</view>
+      </view>
+    </view>

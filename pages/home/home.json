@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "HomeBox":"../../components/HomeBox/HomeBox",
+    "LedgerCard":"../../components/LedgerCard/LedgerCard",
+    "NavBar":"../../components/NavBar/NavBar"
+  },
+  "navigationBarTitleText":"记账"
+}

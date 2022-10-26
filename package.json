@@ -1,0 +1,22 @@
+{
+  "name": "rice-account-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HeyinB/rice-account-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HeyinB/rice-account-project/issues"
+  },
+  "homepage": "https://github.com/HeyinB/rice-account-project#readme",
+  "dependencies": {
+    "dayjs": "^1.11.6"
+  }
+}

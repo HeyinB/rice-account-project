@@ -1,0 +1,73 @@
+<view style="background-color: #f1f1f1">
+  <!-- <Navigation></Navigation> -->
+  <scroll-view
+    scroll-y
+    class="scrollView DrawerPage {{ modalName == 'viewModal' ? 'show' : '' }}"
+    refresher-enabled="{{ true }}"
+    refresher-threshold="{{ 100 }}"
+    refresher-default-style="black"
+    refresher-background="rgba(255, 255, 255, 0)"
+    refresher-triggered="{{ triggered }}"
+    bindrefresherrefresh="onPulling"
+    refresher-triggered="{{ istrigger }}"
+    style="height: 100vh"
+  >
+    <!-- bindscrolltolower="tolower" -->
+    <view class="container">
+      <view class="container-top">
+        <view class="header">
+          <view class="expenditure">
+            <view class="payout-text">本月支出（元）</view>
+            <view class="payout">{{ budgerInfo.sumBudert }}</view>
+          </view>
+
+          <view class="bill" bindtap="showModal" data-target="viewModal">
+            <view>{{ ledger_name }}</view>
+          </view>
+        </view>
+
+        <view class="middle">
+          <view class="middle-left">
+            <view class="lable">本月收入</view>
+            <view class="value">18132.04</view>
+          </view>
+          <view class="middle-right">
+            <view class="lable">结余</view>
+            <view class="value">18132.04</view>
+          </view>
+        </view>
+        <view class="footer" wx:if="{{ show }}">
+          <HomeBox budgerInfo="{{ budgerInfo }}"></HomeBox>
+        </view>
+      </view>
+
+      <NavBar></NavBar>
+      <view>
+        <view wx:for="{{ BillList }}" wx:key="item">
+          <LedgerCard info="{{ item }}"></LedgerCard>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <view
+    class="DrawerClose {{ modalName == 'viewModal' ? 'show' : '' }}"
+    bindtap="hideModal"
+  >
+    <text class="cuIcon-pullright"></text>
+  </view>
+  <scroll-view
+    scroll-y
+    class="DrawerWindow {{ modalName == 'viewModal' ? 'show' : '' }}"
+  >
+    <view
+      class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg"
+    >
+      <view class="cu-item arrow" wx:for="{{ ledgetDataList }}" wx:key="id">
+        <view class="content">
+          <text class="text-grey">{{ item.ledger_name }}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

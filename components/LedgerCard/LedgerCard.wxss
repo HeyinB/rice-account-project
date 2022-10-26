@@ -1,0 +1,55 @@
+.LedgerCard {
+  margin: 0 30rpx;
+  color: var(--primaryTextColor--);
+}
+.LedgerCard .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.LedgerCard .header .header-left .date {
+  font-size: var(--s-font--);
+  font-weight: bold;
+}
+.LedgerCard .header .header-right {
+  font-size: var(--xs-font--);
+  color: var(--secondaryTextColor--);
+}
+.LedgerCard .billBox {
+  margin: 20rpx 0;
+  padding: 20rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+}
+.LedgerCard .billBox .billList .viewItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.LedgerCard .billBox .billList .viewItem .viewItem-left {
+  display: flex;
+  align-items: center;
+}
+.LedgerCard .billBox .billList .viewItem .viewItem-left .icon {
+  margin-right: 20rpx;
+  width: 80rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: var(--xm-font--);
+}
+.LedgerCard .billBox .billList .viewItem .viewItem-left .billInfo {
+  flex: 1;
+}
+.LedgerCard .billBox .billList .viewItem .viewItem-left .billInfo .billType {
+  font-weight: bold;
+}
+.LedgerCard .billBox .billList .viewItem .viewItem-left .billInfo .billTime {
+  color: var(--primaryTextColor--);
+  font-size: var(--xs-font--);
+}
+.LedgerCard .billBox .billList .viewItem .billPrice {
+  font-size: var(--xm-font--);
+  font-weight: bold;
+  color: var(--green--);
+}

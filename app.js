@@ -1,19 +1,24 @@
 // app.js
 App({
-  onLaunch() {
-    // 展示本地存储能力
-    const logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
-  },
   globalData: {
-    userInfo: null
+      userInfo: {}
+  },
+  onLaunch: function() {
+      this.getUserInfo_Storage()
+  },
+  // 获取头像数据
+  async getUserInfo_Storage() {
+      await wx.getStorage({
+          key: "userInfo",
+          encrypt: true, // 若开启加密存储，setStorage 和 getStorage 需要同时声明 encrypt 的值为 true
+          success: (res) => {
+              if (res) {
+                  this.globalData.userInfo = res.data
+                  wx.reLaunch({
+                      url: '/pages/home/home'
+                  })
+              }
+          }
+      })
   }
-})
+});
